@@ -1,0 +1,47 @@
+<template>
+    <div class="haha">
+        <div id="box0">box0</div>
+        <div id="box1">box1</div>
+        <div id="box2">box2</div>
+        <div id="box3">box3</div>
+        <div id="box4">box4</div>
+        <div id="box5">box5</div>
+    </div>
+</template>
+
+<script>
+    export default {}
+</script>
+
+<style>
+    .haha div {
+        width: 100px;
+        height: 100px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 100px;
+        background-color: gray;
+        margin: 40px;
+        float: left;
+    }
+
+    #box1 {
+        transform: skewX(20deg);
+    }
+
+    #box2 {
+        transform: scaleX(0.5);
+    }
+
+    #box3 {
+        transform: rotate(45deg);
+    }
+
+    #box4 {
+        transform: translate(0, 50px);
+    }
+
+    #box5 {
+        transform: matrix(1, 0.5, -0.2, 1, 0, 50);
+    }
+</style>

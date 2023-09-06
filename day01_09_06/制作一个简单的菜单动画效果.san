@@ -1,0 +1,64 @@
+<template>
+    <div class="main">
+        <p class="{{pClassName}}">前端学院</p>
+        <div class="{{lineClassName}}"></div> 
+        <button on-click="changeCss">切换样式</button> 
+    </div> 
+</template>
+
+<script>
+    export default {
+        initData() {
+            return {
+                pClassName: '',
+                lineClassName: 'line hiden',
+            }
+        },
+
+        changeCss() {
+            if (this.data.get('pClassName') === '') {
+                this.data.set('pClassName', 'blue');
+                this.data.set('lineClassName', 'line shown');
+            }
+            else {
+                this.data.set('pClassName', '');
+                this.data.set('lineClassName', 'line hiden');
+            }
+        }
+    }
+</script>
+
+<style>
+    .main {
+        text-align: center;
+        border: 2px solid skyblue;
+    }
+
+    p {
+        font-size: 24px;
+        transition: color 3s ease;
+    }
+
+    .blue {
+        color: skyblue;
+    }
+
+    .line {
+        height: 4px;
+        margin: 0 auto;
+        background-color: skyblue;
+        transition: width 3s ease;
+    }
+
+    .hiden {
+        width: 0;
+    }
+
+    .shown {
+        width: 100px;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+</style>
