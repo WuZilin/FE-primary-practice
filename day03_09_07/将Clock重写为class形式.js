@@ -69,5 +69,21 @@ class Clock2 {
     }
 }
 
-let clock2 = new Clock2({ template: 'h:m:s' });
-clock2.start();
+// let clock2 = new Clock2({ template: 'h:m:s' });
+// clock2.start();
+
+class ExtendedClock extends Clock2 {
+    constructor({ template }, precision) {
+        super({ template });
+        this.precision = precision;
+    }
+    start = () => {
+        this.render();
+        this.timer = setInterval(this.render, this.precision);
+    }
+}
+let lowResolutionClock = new ExtendedClock({
+    template: 'h:m:s'
+}, 2000);
+console.log(lowResolutionClock);
+lowResolutionClock.start();
