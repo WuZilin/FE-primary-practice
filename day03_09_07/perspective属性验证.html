@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #container {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            border: 2px solid black;
+            perspective: 1000px;
+        }
+
+        #box {
+            width: 490px;
+            height: 490px;
+            background-color: pink;
+            margin: 0 auto;
+            transform: translateZ(-500px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="box"></div>
+    </div>
+</body>
+
+</html>

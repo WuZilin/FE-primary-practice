@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #container {
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #brain,
+        #reindeer {
+            position: absolute;
+            transition:
+                5s transform,
+                5s z-index;
+        }
+
+        #brain {
+            z-index: 2;
+        }
+
+        #reindeer {
+
+            z-index: 1;
+        }
+
+        #container:hover #brain,
+        #container:hover #reindeer {
+            transform: rotateY(180deg);
+        }
+
+        #container:hover #brain {
+            z-index: 1;
+        }
+
+        #container:hover #reindeer {
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <img src="./assets/反面(镜像).jpg" alt="一头直立行走的圣诞驯鹿" id="reindeer">
+        <img src="./assets/正面.jpg" alt="烧脑" id="brain">
+    </div>
+</body>
+
+</html>
