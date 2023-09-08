@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #showArea {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        z-index: 1;
+    }
+
+    #showArea img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* 所有展示区图片的初始z-index都为1 */
+
+    }
+
+    #slider {
+        width: 80%;
+        height: 20%;
+        position: absolute;
+        left: 50%;
+        margin-left: -40%;
+        bottom: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+    }
+
+    #slider img {
+        width: 18%;
+        height: 100%;
+        opacity: 0.5;
+    }
+
+    #slider img:hover {
+        cursor: pointer;
+    }
+
+    /* 每张图片各自的动画 */
+    .active:nth-child(1) {
+        animation: leftIn 0.5s ease-out;
+    }
+
+    @keyframes leftIn {
+        from {
+            left: -500px;
+        }
+
+        to {
+            left: 0px;
+        }
+    }
+
+    .active:nth-child(2) {
+        animation: topIn 0.5s ease-out;
+    }
+
+    @keyframes topIn {
+        from {
+            top: 350px;
+        }
+
+        to {
+            top: 0px;
+        }
+    }
+
+    .active:nth-child(3) {
+        animation: toBig 1s ease-in;
+    }
+
+    @keyframes toBig {
+        from {
+            scale: 0.1;
+        }
+
+        to {
+            scale: 1;
+        }
+    }
+
+    .active:nth-child(4) {
+        animation: toSmall 1s ease-out;
+    }
+
+    @keyframes toSmall {
+        from {
+            scale: 2;
+        }
+
+        to {
+            scale: 1;
+        }
+    }
+
+    .active:nth-child(5) {
+        animation: turnAndBigger 0.7s ease-in-out;
+    }
+
+    @keyframes turnAndBigger {
+        from {
+            transform: rotate(-360deg);
+            scale: 0.1;
+        }
+
+        to {
+            transform: rotate(0deg);
+            scale: 1;
+        }
+    }
+</style>
+
+<body>
+    <div id="showArea">
+        <img src="./assets/风景1.jpg" alt="一张美丽的风景照片">
+        <img src="./assets/风景2.jpg" alt="一张美丽的风景照片">
+        <img src="./assets/风景3.jpg" alt="一张美丽的风景照片">
+        <img src="./assets/风景4.jpg" alt="一张美丽的风景照片">
+        <img src="./assets/风景5.jpg" alt="一张美丽的风景照片">
+    </div>
+    <div id="slider">
+        <img src="./assets/风景1.jpg" alt="一张美丽的风景照片">
+        <img src="./assets/风景2.jpg" alt="一张美丽的风景照片">
+        <img src="./assets/风景3.jpg" alt="一张美丽的风景照片">
+        <img src="./assets/风景4.jpg" alt="一张美丽的风景照片">
+        <img src="./assets/风景5.jpg" alt="一张美丽的风景照片">
+    </div>
+</body>
+
+<script>
+    let maxIndex = 1;
+    const showImgs = document.querySelectorAll('#showArea img');
+    const slider = document.querySelector('#slider');
+    const sliderImgs = document.querySelectorAll('#slider img');
+    for (let i = 0; i < sliderImgs.length; ++i) {
+        sliderImgs[i].addEventListener('click', () => {
+            // 先移除类名，再添加类名,保证每次都能触发动画
+            maxIndex++;
+            if (showImgs[i].classList.value.includes('active')) {
+                showImgs[i].classList.remove('active');
+            }
+
+            // showImgs[i].setAttribute('z-index', maxIndex);
+            showImgs[i].style.zIndex = '' + maxIndex;
+            // showImgs[i].classList.add('active');
+            slider.setAttribute('z-index', maxIndex + 1);
+            setTimeout(() => {
+                showImgs[i].classList.add('active');
+            }, 1);
+
+        });
+    }
+</script>
+
+</html>
