@@ -159,8 +159,9 @@
 
             // showImgs[i].setAttribute('z-index', maxIndex);
             showImgs[i].style.zIndex = '' + maxIndex;
-            // showImgs[i].classList.add('active');
             slider.setAttribute('z-index', maxIndex + 1);
+
+            // showImgs[i].classList.add('active');  不知道为什么这么写并不能重复触发动画
             setTimeout(() => {
                 showImgs[i].classList.add('active');
             }, 1);
