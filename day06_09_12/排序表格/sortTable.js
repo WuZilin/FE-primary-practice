@@ -75,7 +75,7 @@ let students = [
     { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' }
 ];
 const theClass = new Class(students);
-theClass.render();
+theClass.render(order);
 
 const inputs = document.querySelectorAll('input');
 const btn = document.querySelector('button');
