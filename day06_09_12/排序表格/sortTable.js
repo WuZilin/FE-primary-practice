@@ -72,7 +72,51 @@ let students = [
     { 'name': 'haha', 'chinese': 1, 'math': 2, 'english': 3, 'total': '6' },
     { 'name': 'heihei', 'chinese': 3, 'math': 1, 'english': 0, 'total': '4' },
     { 'name': 'hoho', 'chinese': 1, 'math': 3, 'english': 1, 'total': '5' },
-    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' }
+    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' },
+    { 'name': 'haha', 'chinese': 1, 'math': 2, 'english': 3, 'total': '6' },
+    { 'name': 'heihei', 'chinese': 3, 'math': 1, 'english': 0, 'total': '4' },
+    { 'name': 'hoho', 'chinese': 1, 'math': 3, 'english': 1, 'total': '5' },
+    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' },
+    { 'name': 'haha', 'chinese': 1, 'math': 2, 'english': 3, 'total': '6' },
+    { 'name': 'heihei', 'chinese': 3, 'math': 1, 'english': 0, 'total': '4' },
+    { 'name': 'hoho', 'chinese': 1, 'math': 3, 'english': 1, 'total': '5' },
+    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' },
+    { 'name': 'haha', 'chinese': 1, 'math': 2, 'english': 3, 'total': '6' },
+    { 'name': 'heihei', 'chinese': 3, 'math': 1, 'english': 0, 'total': '4' },
+    { 'name': 'hoho', 'chinese': 1, 'math': 3, 'english': 1, 'total': '5' },
+    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' },
+    { 'name': 'haha', 'chinese': 1, 'math': 2, 'english': 3, 'total': '6' },
+    { 'name': 'heihei', 'chinese': 3, 'math': 1, 'english': 0, 'total': '4' },
+    { 'name': 'hoho', 'chinese': 1, 'math': 3, 'english': 1, 'total': '5' },
+    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' },
+    { 'name': 'haha', 'chinese': 1, 'math': 2, 'english': 3, 'total': '6' },
+    { 'name': 'heihei', 'chinese': 3, 'math': 1, 'english': 0, 'total': '4' },
+    { 'name': 'hoho', 'chinese': 1, 'math': 3, 'english': 1, 'total': '5' },
+    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' },
+    { 'name': 'haha', 'chinese': 1, 'math': 2, 'english': 3, 'total': '6' },
+    { 'name': 'heihei', 'chinese': 3, 'math': 1, 'english': 0, 'total': '4' },
+    { 'name': 'hoho', 'chinese': 1, 'math': 3, 'english': 1, 'total': '5' },
+    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' },
+    { 'name': 'haha', 'chinese': 1, 'math': 2, 'english': 3, 'total': '6' },
+    { 'name': 'heihei', 'chinese': 3, 'math': 1, 'english': 0, 'total': '4' },
+    { 'name': 'hoho', 'chinese': 1, 'math': 3, 'english': 1, 'total': '5' },
+    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' },
+    { 'name': 'haha', 'chinese': 1, 'math': 2, 'english': 3, 'total': '6' },
+    { 'name': 'heihei', 'chinese': 3, 'math': 1, 'english': 0, 'total': '4' },
+    { 'name': 'hoho', 'chinese': 1, 'math': 3, 'english': 1, 'total': '5' },
+    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' },
+    { 'name': 'haha', 'chinese': 1, 'math': 2, 'english': 3, 'total': '6' },
+    { 'name': 'heihei', 'chinese': 3, 'math': 1, 'english': 0, 'total': '4' },
+    { 'name': 'hoho', 'chinese': 1, 'math': 3, 'english': 1, 'total': '5' },
+    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' },
+    { 'name': 'haha', 'chinese': 1, 'math': 2, 'english': 3, 'total': '6' },
+    { 'name': 'heihei', 'chinese': 3, 'math': 1, 'english': 0, 'total': '4' },
+    { 'name': 'hoho', 'chinese': 1, 'math': 3, 'english': 1, 'total': '5' },
+    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' },
+    { 'name': 'haha', 'chinese': 1, 'math': 2, 'english': 3, 'total': '6' },
+    { 'name': 'heihei', 'chinese': 3, 'math': 1, 'english': 0, 'total': '4' },
+    { 'name': 'hoho', 'chinese': 1, 'math': 3, 'english': 1, 'total': '5' },
+    { 'name': 'hehe', 'chinese': 2, 'math': 0, 'english': 4, 'total': '6' },
 ];
 const theClass = new Class(students);
 theClass.render(order);
@@ -120,3 +164,17 @@ for (let i = 0; i < orders.length; ++i) {
         e.target.classList.add('light');
     });
 }
+
+const thead = document.querySelector('thead');
+window.addEventListener('scroll', () => {
+    var scrollTop = document.documentElement.scrollTop; // 页面滚动高度
+    if (scrollTop > thead.offsetHeight) {
+        thead.style.position = 'fixed';
+        thead.style.top = 0;
+        console.log('haah');
+    }
+    else {
+        thead.style.position = 'sticky';
+        thead.style.top = `${thead.offsetHeight}px`;
+    }
+});

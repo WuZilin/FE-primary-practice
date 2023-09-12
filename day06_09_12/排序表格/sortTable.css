@@ -19,6 +19,10 @@ caption {
     font-size: 40px;
 }
 
+thead {
+    position: sticky;
+}
+
 th,
 td {
     text-align: center;
