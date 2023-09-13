@@ -1,0 +1,19 @@
+#inputBox {
+    border: 1px black solid;
+    width: 150px;
+    height: 25px;
+    position: relative;
+}
+
+#showCal {
+    width: 0;
+    height: 0;
+    position: absolute;
+    cursor: pointer;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 5px solid black;
+    right: 10px;
+    top: 10px;
+}
