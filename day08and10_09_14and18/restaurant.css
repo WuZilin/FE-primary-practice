@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#restaurant {
+    width: 800px;
+    height: 600px;
+    border: 2px black solid;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+}
+
+#kitchen {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    border-right: 1px dashed pink;
+    text-align: center;
+}
+
+#hall {
+    position: absolute;
+    width: 600px;
+    height: 100%;
+    right: 0;
+    text-align: center;
+}
+
+.cook,
+.waiter {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.waiter {
+    background-color: rgb(158, 226, 239);
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.cook {
+    background-color: rgb(144, 242, 144);
+    left: 70px;
+}
+
+.seat {
+    width: 70px;
+    height: 70px;
+    background-color: orange;
+    opacity: 0.8;
+    position: absolute;
+    top: 270px;
+    right: 270px;
+}
+
+#seat1,
+#waiter1,
+#cook1 {
+    top: 100px;
+}
+
+#seat2,
+#waiter2,
+#cook2 {
+    top: 270px;
+}
+
+#seat3,
+#waiter3,
+#cook3 {
+    top: 440px;
+}
+
+.customer {
+    width: 70px;
+    height: 70px;
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    right: 200px;
+    top: 330px;
+}
+
+button {
+    width: 200px;
+    height: 80px;
+    position: absolute;
+}
+
+#open {
+    top: 100px;
+    left: 40px;
+}
+
+#close {
+    top: 270px;
+    left: 40px;
+}
+
+#lineNum {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+#money {
+    width: 300px;
+    position: absolute;
+    top: 400px;
+    left: 40px;
+}
