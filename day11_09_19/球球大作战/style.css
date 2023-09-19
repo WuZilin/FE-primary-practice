@@ -1,0 +1,78 @@
+html,
+body {
+  margin: 0;
+}
+
+html {
+  font-family: sans-serif;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: inherit;
+}
+
+h1 {
+  font-size: 2rem;
+  position: absolute;
+  margin: 0;
+  top: 0px;
+  right: 5px;
+  color: white;
+  /* text-shadow: 0 0 4px white; */
+}
+
+h2 {
+  font-size: 1.5rem;
+  position: absolute;
+  margin: 0;
+  top: 0px;
+  right: 700px;
+  color: white;
+}
+
+#start {
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 300px;
+  opacity: 0.5;
+  font-size: 30px;
+  border-radius: 20px;
+}
+
+#start:hover {
+  opacity: 1;
+}
+
+#score {
+  position: absolute;
+  width: 400px;
+  height: 80px;
+  left: 50%;
+  transform: translateX(-200px);
+  top: 50px;
+  text-align: center;
+  /* display: none; */
+}
+
+#message {
+  position: absolute;
+  width: 1000px;
+  height: 100px;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-500px);
+  text-align: center;
+  /* display: none; */
+}
+
+h3 {
+  color: pink;
+  position: absolute;
+  left: 60px;
+  top: 0;
+}
