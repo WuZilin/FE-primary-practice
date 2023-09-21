@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#blogContanier {
+    width: 100%;
+    height: 2594px;
+}
+
+/* 头部栏样式式 */
+#header {
+    width: 100%;
+    height: 465px;
+    /* border-bottom: 1px pink dashed; */
+}
+
+/* 上方导航栏样式 */
+
+#blog a .arrow {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+}
+
+#topBar {
+    width: 86%;
+    height: 120px;
+    margin: 0 auto;
+    border-bottom: 1px gray solid;
+    position: relative;
+}
+
+#topBar p {
+    position: absolute;
+    left: 0;
+    top: 45px;
+}
+
+#topBar nav {
+    position: absolute;
+    right: 100px;
+    top: 45px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px pink dashed; */
+}
+
+#topBar nav a {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+#topBar nav a:hover {
+    font-size: larger;
+}
+
+#topBar nav a.chosen {
+    border-bottom: #414c52 1px solid;
+}
+
+
+/* 巨大标题样式 */
+
+#bigTitle {
+    width: 85%;
+    height: 345px;
+    margin: 0 auto;
+    line-height: 345px;
+    font-size: 230px;
+    font-weight: bolder;
+    text-align: center;
+    border-bottom: 1px gray solid;
+}
+
+/* 切换白天黑夜样式的按钮 */
+
+#toggleStyleButton {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 60px;
+    height: 30px;
+    background-color: black;
+    border-radius: 30px;
+    transition: background-color 0.5s ease;
+}
+
+#sun,
+#moon,
+#choseMark {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+}
+
+#choseMark {
+    border-radius: 50%;
+    background-color: white;
+    top: 7px;
+    right: 6px;
+    transition: transform 0.5s ease;
+}
+
+#moon {
+    top: 7px;
+    right: 8px;
+}
+
+#sun {
+    top: 7px;
+    left: 8px;
+}
+
+
+/* blog 区域样式 */
+
+#blog {
+    width: 100%;
+    height: 2045px;
+    /* border-bottom: 1px dashed pink; */
+    position: relative;
+}
+
+/* 所有blog共用的样式 */
+.authorAndDate {
+    color: rgb(171, 102, 236);
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+    color: gray;
+}
+
+.summary {
+    color: gray;
+}
+
+.tag {
+    height: 24px;
+    border-radius: 24px;
+    display: inline-block;
+    font-size: 15px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+/* Recent blog posts区域 的样式*/
+
+#recentBlogPosts {
+    width: 86%;
+    height: 862px;
+    margin: 0 auto;
+    /* border: 1px skyblue dashed; */
+}
+
+#rh3,
+#ah3 {
+    position: relative;
+    top: 50px;
+    font-size: 25px;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 70px;
+}
+
+#recentShowArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 左上这块儿区域的样式 */
+
+/* #leftTop-blog,
+#rightTop-blog,
+#down-blog {
+    border: 1px orange dashed;
+} */
+
+#leftTop-blog {
+    width: 592px;
+}
+
+#leftTop-blog img {
+    width: 592px;
+    height: 228px;
+    margin-bottom: 20px;
+}
+
+.authorAndDate,
+.title,
+.summary {
+    margin-bottom: 15px;
+}
+
+#leftTop-blog .tag:nth-child(5) {
+    background-color: #f9f5ff;
+    color: #6941c6;
+}
+
+#leftTop-blog .tag:nth-child(6) {
+    background-color: #eef4ff;
+    color: #3538cd;
+}
+
+#leftTop-blog .tag:nth-child(7) {
+    background-color: #eadee8;
+    color: #c6498e;
+}
+
+/* 右上这块儿区域的样式 */
+#rightTop-blog {
+    width: 592px;
+    height: 432;
+}
+
+.rightTop-ceil {
+    display: flex;
+}
+
+#rightTop-blog img {
+    width: 320px;
+    height: 200px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+#rightTop-blog .title {
+    font-size: 20px;
+}
+
+#rightTop-content1 .tag:nth-child(4) {
+    background-color: #ebf3f9;
+    color: #0269a0;
+}
+
+#rightTop-content1 .tag:nth-child(5) {
+    background-color: #fdf1fb;
+    color: #c11474;
+}
+
+#rightTop-content2 .tag:nth-child(4) {
+    background-color: #ecfdf3;
+    color: #047948;
+}
+
+#rightTop-content2 .tag:nth-child(5) {
+    background-color: #fdf1fa;
+    color: #c11474;
+}
+
+/* 下面这块儿区域的样式 */
+
+#down-blog {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+}
+
+#down-blog img {
+    width: 592px;
+    height: 246px;
+    margin-right: 40px;
+}
+
+#down-content .tag:nth-child(4) {
+    background-color: #f9f5ff;
+    color: #6941c6;
+}
+
+#down-content .tag:nth-child(5) {
+    background-color: #fdf1fa;
+    color: #c11474;
+}
+
+
+/* All blog posts区域样式 */
+#allBlogPosts {
+    width: 86%;
+    height: 1180px;
+    margin: 0 auto;
+    position: relative;
+    /* border: 1px rgb(142, 235, 135) dashed; */
+}
+
+.allBlogShowArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    border-bottom: 1px gray solid;
+    padding-bottom: 20px;
+    width: 100%;
+    position: absolute;
+    transition: transform 1s ease;
+}
+
+.allBlogShowArea img {
+    width: 384px;
+    height: 240px;
+    margin-bottom: 20px;
+}
+
+.allBlogShowArea .tag {
+    background-color: #ecfdf3;
+    color: #047948;
+}
+
+/* 换页器的样式 */
+
+.page-changer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+}
+
+.page-changer img {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 3px
+}
+
+.page-changer>a {
+    color: gray;
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+}
+
+.page-changer>a:hover {
+    color: rgb(201, 176, 239);
+}
+
+.pages {
+    display: flex;
+}
+
+.pages a {
+    display: inline-block;
+    color: gray;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.pages p {
+    position: relative;
+    top: 15px;
+}
+
+.pages a.chosen {
+    background-color: rgb(249 245 255);
+    color: rgb(167, 116, 243);
+    border-radius: 5px;
+}
+
+/* footer的样式 */
+footer {
+    width: 86%;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+/* 黑夜样式 */
+#topBar p.dark,
+#topBar nav a.dark,
+#bigTitle.dark {
+    color: white;
+    border-color: white;
+}
+
+#choseMark.dark {
+    background-color: black;
+    transform: translateX(-30px);
+}
+
+#toggleStyleButton.dark {
+    background-color: white;
+}
+
+#rh3.dark,
+#ah3.dark {
+    color: white;
+}
+
+/* 为页面滑动所写的样式 */
+#allBlogShowContanier {
+    overflow: hidden;
+    width: 100%;
+    height: 1000px;
+    position: relative;
+}
+
+.allBlogShowArea.right {
+    left: 1254px;
+    transform: translateX(1);
+}
+
+.allBlogShowArea.left {
+    right: 1254px;
+    transform: translateX(1);
+}
+
+/* sfwfavasdvwv */
+
+#header.newsletter {
+    height: 125px;
+}
+
+#subscribeArea {
+    width: 86%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#news-p1 {
+    color: #7f56d9;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 20px;
+}
+
+#news-p2 {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+
+#news-p3 {
+    width: 768px;
+    font-size: 20px;
+    color: #C0C5D0;
+    line-height: 30px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#email {
+    width: 360px;
+    height: 48px;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#subscribeBtn {
+    width: 118px;
+    height: 48px;
+    border-radius: 8px;
+    color: white;
+    background-color: #7f56d9;
+}
+
+#news-p4 {
+    font-size: 14px;
+    color: #C0C5D0;
+    font-weight: 400;
+    width: 360px;
+    line-height: 20px;
+    margin: 15px auto;
+}
+
+#news-p4 a {
+    color: #C0C5D0;
+}
+
+#allBlogPosts.newsletter {
+    height: 650px;
+}
+
+#blogContanier.newsletter {
+    height: 1200px;
+}
+
+#allBlogShowContanier.newsletter {
+    height: 650px;
+}

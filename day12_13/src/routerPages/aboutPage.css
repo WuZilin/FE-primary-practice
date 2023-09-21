@@ -1,0 +1,30 @@
+#mainShowArea {
+    width: 86%;
+    margin: 40px auto;
+}
+
+#JohnDoe {
+    width: 1234px;
+    height: 556px;
+}
+
+#mainShowArea h4 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#mainShowArea p,
+#mainShowArea li {
+    font-size: 16px;
+    color: #c0c5d0;
+    list-style-position: inside
+}
+
+footer.about {
+    margin-top: 40px;
+}
+
+#mainShowArea h4.dark {
+    color: white;
+}

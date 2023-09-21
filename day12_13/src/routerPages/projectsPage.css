@@ -1,0 +1,31 @@
+title img.arrow {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+}
+
+.allBlogShowArea.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.allBlogShowArea.projects div>img {
+    width: 592px;
+    height: 378px;
+}
+
+.sp-ceil {
+    grid-column: 1/3;
+    width: 100%;
+}
+
+.allBlogShowArea.projects .sp-ceil>img {
+    width: 1216px;
+    height: 760px;
+}
+
+.projectFooter {
+    margin-top: 1100px;
+}
