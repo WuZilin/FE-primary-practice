@@ -1,0 +1,160 @@
+#header.detail {
+    height: 125px;
+}
+
+#subscribeArea {
+    width: 86%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+#news-p1 {
+    color: #7f56d9;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 20px;
+}
+
+#news-p2 {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+
+#news-p3 {
+    width: 768px;
+    font-size: 20px;
+    color: #C0C5D0;
+    line-height: 30px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#email {
+    width: 360px;
+    height: 48px;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#subscribeBtn {
+    width: 118px;
+    height: 48px;
+    border-radius: 8px;
+    color: white;
+    background-color: #7f56d9;
+}
+
+#news-p4 {
+    font-size: 14px;
+    color: #C0C5D0;
+    font-weight: 400;
+    width: 360px;
+    line-height: 20px;
+    margin: 15px auto;
+}
+
+#news-p4 a {
+    color: #C0C5D0;
+}
+
+#allBlogPosts.newsletter {
+    height: 650px;
+}
+
+#blogContanier.newsletter {
+    height: 1200px;
+}
+
+#allBlogShowContanier.newsletter {
+    height: 650px;
+}
+
+#detailPageMixArea {
+    width: 86%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#leftRecent {
+    width: 342px;
+}
+
+#leftRecent>div {
+    margin-bottom: 30px;
+}
+
+#leftRecent>div>img {
+    width: 342px;
+    height: 204px;
+}
+
+.title img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+}
+
+#rightArea {
+    width: 778px;
+}
+
+#leftRecent .tag,
+#rightArea .tag {
+    background-color: #ecfdf3;
+    color: #047948;
+}
+
+#detailMessage img {
+    width: 778px;
+}
+
+#gridImg {
+    height: 498px;
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #C0C5D0;
+    margin-bottom: 20px;
+}
+
+.imgDescript {
+    font: 16px;
+    text-align: center;
+    font-weight: 700;
+    color: #C0C5D0;
+    margin-bottom: 20px;
+}
+
+.smallTitle {
+    color: #C0C5D0;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.tinyTitle {
+    color: #C0C5D0;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#rightArea li {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #C0C5D0;
+    list-style: inside;
+    margin-bottom: 20px;
+}

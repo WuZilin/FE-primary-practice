@@ -1,0 +1,282 @@
+import './detailBlog.css'
+
+const detailBlogPage = `
+<div id="header" class="detail">
+            <!-- 上方导航栏 -->
+            <div id="topBar">
+                <p>Your Name</p>
+                <nav>
+                    <a href="/blog" class="chosen nav-link4page">Blog</a>
+                    <a href="/projects" class="nav-link4page">Projects</a>
+                    <a href="/about" class="nav-link4page">About</a>
+                    <a href="/newsletter" class=" nav-link4page">Newsletter</a>
+                </nav>
+                <!-- 切换白天黑夜样式的按钮 -->
+                <div id="toggleStyleButton">
+                    <!-- <img src="../src/asets/sun.png" alt="太阳" id="sun">
+                    <img src="../src/asets/moon.png" alt="月亮" id="moon"> -->
+                    <div id="choseMark"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="detailPageMixArea">
+            <div id="leftRecent">
+                <h3 id="ah3">All blog posts</h3>
+                <div>
+                    <img src="../src/asets/img5.png" alt="几张办公桌">
+                    <p class="authorAndDate">Olivia Rhye · 1 Jan 2023</p>
+                    <div class="title">
+                        <p>UX review presentations</p>
+                        <a href="">
+                            <img src="../src/asets/箭头_右上.png" alt="" class="arrow">
+                        </a>
+                    </div>
+                    <p class="summary">
+                        How do you create compelling presentations that wow your colleagues and impress your
+                        managers?
+                    </p>
+                    <div class="tag">Design</div>
+                    <div class="tag">Research</div>
+                    <div class="tag">Presentation</div>
+                </div>
+                <div>
+                    <img src="../src/asets/img6.png" alt="几张办公桌">
+                    <p class="authorAndDate">Olivia Rhye · 1 Jan 2023</p>
+                    <div class="title">
+                        <p>UX review presentations</p>
+                        <a href="">
+                            <img src="../src/asets/箭头_右上.png" alt="" class="arrow">
+                        </a>
+                    </div>
+                    <p class="summary">
+                        How do you create compelling presentations that wow your colleagues and impress your
+                        managers?
+                    </p>
+                    <div class="tag">Design</div>
+                    <div class="tag">Research</div>
+                    <div class="tag">Presentation</div>
+                </div>
+                <div>
+                    <img src="../src/asets/img7.png" alt="几张办公桌">
+                    <p class="authorAndDate">Olivia Rhye · 1 Jan 2023</p>
+                    <div class="title">
+                        <p>UX review presentations</p>
+                        <a href="">
+                            <img src="../src/asets/箭头_右上.png" alt="" class="arrow">
+                        </a>
+                    </div>
+                    <p class="summary">
+                        How do you create compelling presentations that wow your colleagues and impress your
+                        managers?
+                    </p>
+                    <div class="tag">Design</div>
+                    <div class="tag">Research</div>
+                    <div class="tag">Presentation</div>
+                </div>
+                <div>
+                    <img src="../src/asets/img8.png" alt="几张办公桌">
+                    <p class="authorAndDate">Olivia Rhye · 1 Jan 2023</p>
+                    <div class="title">
+                        <p>UX review presentations</p>
+                        <a href="">
+                            <img src="../src/asets/箭头_右上.png" alt="" class="arrow">
+                        </a>
+                    </div>
+                    <p class="summary">
+                        How do you create compelling presentations that wow your colleagues and impress your
+                        managers?
+                    </p>
+                    <div class="tag">Design</div>
+                    <div class="tag">Research</div>
+                    <div class="tag">Presentation</div>
+                </div>
+                <div>
+                    <img src="../src/asets/img9.png" alt="几张办公桌">
+                    <p class="authorAndDate">Olivia Rhye · 1 Jan 2023</p>
+                    <div class="title">
+                        <p>UX review presentations</p>
+                        <a href="">
+                            <img src="../src/asets/箭头_右上.png" alt="" class="arrow">
+                        </a>
+                    </div>
+                    <p class="summary">
+                        How do you create compelling presentations that wow your colleagues and impress your
+                        managers?
+                    </p>
+                    <div class="tag">Design</div>
+                    <div class="tag">Research</div>
+                    <div class="tag">Presentation</div>
+                </div>
+                <div>
+                    <img src="../src/asets/img10.png" alt="几张办公桌">
+                    <p class="authorAndDate">Olivia Rhye · 1 Jan 2023</p>
+                    <div class="title">
+                        <p>UX review presentations</p>
+                        <a href="">
+                            <img src="../src/asets/箭头_右上.png" alt="" class="arrow">
+                        </a>
+                    </div>
+                    <p class="summary">
+                        How do you create compelling presentations that wow your colleagues and impress your
+                        managers?
+                    </p>
+                    <div class="tag">Design</div>
+                    <div class="tag">Research</div>
+                    <div class="tag">Presentation</div>
+                </div>
+            </div>
+            <div id="rightArea">
+                <div id="detailMessage">
+                    <p class="authorAndDate">Sundat , 1 Jan 2023</p>
+                    <div class="title">
+                        <p>Grid system for better Design User Interface</p>
+                    </div>
+                    <img src="../src/asets/img4.png" alt="期刊网站页面 ">
+                    <p class="paragraph">
+                        A grid system is a design tool used to arrange content on a webpage. It is a series of vertical
+                        and horizontal lines that create a matrix of intersecting points, which can be used to align and
+                        organize page elements. Grid systems are used to create a consistent look and feel across a
+                        website, and can help to make the layout more visually appealing and easier to navigate.
+                    </p>
+                    <p class="imgDescript">
+                        Definition: A grid is made up of columns, gutters, and margins that provide a structure for the
+                        layout of elements on a page.
+                    </p>
+                    <img src="../src/asets/Grid.png" alt="表格示意图" id="gridImg">
+                    <p class="paragraph">
+                        There are three common grid types used in websites and interfaces: column grid, modular grid,
+                        and hierarchical grid.
+                    </p>
+                    <p class="paragraph">
+                        Column grid involves dividing a page into vertical columns. UI elements and content are then
+                        aligned to these columns.
+                    </p>
+                    <p class="paragraph">
+                        Modular grid extends the column grid further by adding rows to it. This intersection of columns
+                        and rows make up modules to which elements and content are aligned. Modular grids are great for
+                        ecommerce and listing pages, as rows are repeatable to accommodate browsing.
+                    </p>
+                    <p class="paragraph">
+                        Hierarchical grid: Content is organized by importance using columns, rows, and modules. The most
+                        important elements and pieces of content take up the biggest pieces of the grid.
+                    </p>
+                    <p class="smallTitle">Breaking Down the Grid</p>
+                    <p class="paragraph">Regardless of the type of grid you are using, the grid is made up of three
+                        elements: columns, gutters, and margins.
+                    </p>
+                    <p class="paragraph"><span>Columns:</span>Columns take up most of the real estate in a
+                        grid. Elements and content are placed in columns. To adapt to any screen size, column widths are
+                        generally defined with percentages rather than fixed values and the number of columns will vary.
+                        For example, a grid on a mobile device might have 4 columns and a grid on a desktop might have
+                        12 columns.</p>
+                    <p class="paragraph"><span>Gutters:</span>Gutters: The gutter is the space between columns that
+                        separates elements and content from different columns. Gutter widths are fixed values but can
+                        change based on different breakpoints. For example, wider gutters are appropriate for larger
+                        screens, whereas smaller gutters are appropriate for smaller screens like mobile.
+                    </p>
+                    <img src="../src/asets/grid2.png" alt="表格适宜图">
+                    <p class="imgDescript">Three elements make up any grid: (1) columns, (2) gutters, and (3) margins.
+                    </p>
+
+                    <p class="smallTitle">Examples of Grids in Use</p>
+                    <p class="tinyTitle">Examples 1: Hierarchical Grid</p>
+
+                    <p class="paragraph">Our first example is from The <a>New York Times</a>. This screen utilizes a
+                        hierarchical grid to create a newspaper-like reading experience. At desktop screen size, two
+                        main columns make up the hierarchical grid. The most important news story takes up the most
+                        space in the grid, the left column, followed by secondary and tertiary stories, which take up
+                        the smaller column and modules on the right.
+                    </p>
+                    <img src="../src/asets/纽约时报.png" alt="纽约时报">
+                    <p class="imgDescript">The New York Times uses a hierarchical grid to achieve its newspaper-like
+                        reading experience. (We highlighted the columns in yellow, the gutters in blue, and the margins
+                        in purple.)
+                    </p>
+                    <p class="tinyTitle">Example 2: Column Grid</p>
+                    <p class="paragraph">Our second example is from Ritual.com, a vitamin company. This design uses a
+                        column grid to create an attractive visual experience. At this screen size, four consistently
+                        sized columns make up the grid structure and elements are aligned to and within these columns.
+                        The gutters, the spaces in between the columns, are also consistently sized and help the user
+                        visually separate the different products. The margins are independently sized and are the same
+                        between the left and right sides.
+                    </p>
+                    <p class="smallTitle">Benefits of Grid</p>
+                    <p class="paragraph">Using a grid benefits both end user and the designers alike:</p>
+                    <ul>
+                        <li>Designers can quickly put together well-aliged interfaces.</li>
+                        <li>Users can easily scan predictable grid-based interfaces.</li>
+                        <li>A good grid is easy to adapt to various screen sizes and orientation. In fact, grid layouts
+                            are an essential component of responsive web design. Responsive design uses breakpoints to
+                            determine the screen size threshold at which the layout should change. For example, a
+                            desktop screen may have 12 grid columns, which may be stacked on mobile so that the
+                            resulting layout has only 4 columns.</li>
+                    </ul>
+                    <img src="../src/asets/manyImg.jpg" alt="">
+                    <p class="imgDescript">At the mobile size, Behance's one-column grid (left) was reflowed into a
+                        four-column grid structure (right).
+                    </p>
+                    <p class="paragraph">Even more importantly, the grid is not a throw-away concept. It is used by both
+                        designers and developers alike. Be sure to communicate with your developers the grid structure
+                        used when creating the design, so they can implement it accordingly.
+                    </p>
+                    <p class="smallTitle">Choosing and Setting Up Your Grid</p>
+                    <p class="paragraph">How you use and set up a grid is fundamental to creating well thought out
+                        layouts and experiences for your user.
+                    </p>
+                    <p class="paragraph"><span>Choose the right grid for your needs.</span> Take time to think through
+                        what type of grid ­— column, modular, or hierarchical —
+                        best suits your needs. A hierarchical grid may be the best fit if one item on your page will
+                        always be more important than the surrounding elements. For example, hierarchical grids are
+                        great for online news platforms. If the content you need to display is highly variable, consider
+                        using a basic column or modular grid, as these provide lots of flexibility when designing. For
+                        example, elements and content can span across multiple columns or modules or just one to fit
+                        design needs.
+                    </p>
+                    <p class="paragraph"><span>Spend time setting up your grid.</span> Once you have figured out what
+                        type of grid will work well for your needs, start setting it up. Determine the number of columns
+                        and the margin and gutter sizes relative to your screen sizes. You will most likely want to
+                        prepare for mobile, tablet, and desktop screens. A 12-column grid at laptop or desktop size is
+                        generally flexible enough for most design needs. The number of columns will decrease as your
+                        device size decreases. Wireframing tools like Sketch and Figma have quick and easy ways to set
+                        up and edit your grid, even after you have started designing.
+                    </p>
+                    <img src="../src/asets/atributeSet.png" alt="">
+                    <p class="imgDescript">Easily set the number of columns, the gutter size, and margin size in Figma.
+                    </p>
+                    <p class="paragraph"><span>Always place content within columns, not gutters. </span>The gutters
+                        should remain empty as you place elements on the grid in order to clearly separate and align
+                        content and elements
+                    </p>
+                    <img src="../src/asets/aaa.png" alt="">
+                    <p class="imgDescript">Content or elements should be placed within and across columns, not gutters.
+                    </p>
+                    <p class="paragraph"><span>Consider using an 8px grid system.</span>For most common devices, the
+                        screen size in pixels is a multiple of 8. Keeping grid-component values at a multiple of 8 will
+                        generally make it easier to scale and implement a grid.
+                    </p>
+                    <p class="smallTitle">Conclusion</p>
+                    <p class="paragraph">Grids not only provide designers a structure on which to base layouts, but they
+                        also improve readability and scannability for end users. Use a good grid system that easily
+                        adapts to various screen sizes.</p>
+                    <div class="tag">Design</div>
+                    <div class="tag">Research</div>
+                    <div class="tag">Presentation</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="subscribeArea">
+            <p id="news-p1">Newlatters</p>
+            <p id="news-p2">Stories and interviews</p>
+            <p id="news-p3">Subscribe to learn about new product features, the latest in technology, solutions, and
+                updates</p>
+            <input type="text" placeholder="Enter your email" id="email">
+            <button id="subscribeBtn">Subscribe</button>
+            <p id="news-p4">We care about your data in our <a href="">privacy policy</a></p>
+        </div>
+
+        <footer class="about">© 2023 Twitter Linkedln Email RSS feed Add to Feedly</footer>
+`;
+export default detailBlogPage;
