@@ -72,17 +72,17 @@
 // console.log(balls);
 
 
-function Person() {
-    this.test1 = function (a, b) {
-        console.log(a, b);
-    }
-    this.test1 = function (a) {
-        console.log(a);
-    }
-}
-var p1 = new Person();
-p1.test1("1", "2");
-p1.test1("3");
+// function Person() {
+//     this.test1 = function (a, b) {
+//         console.log(a, b);
+//     }
+//     this.test1 = function (a) {
+//         console.log(a);
+//     }
+// }
+// var p1 = new Person();
+// p1.test1("1", "2");
+// p1.test1("3");
 
 
 
@@ -93,5 +93,14 @@ p1.test1("3");
 // console.log(reg.test(bb));
 // console.log(reg.test(aa));
 
-let qq = '10t3eg';
-console.log(parseInt(qq));
+// let qq = '10t3eg';
+// console.log(parseInt(qq));
+
+Array.prototype.bar = 1;
+
+let products = [1001, "mouse", "monitor", { firstName: "Jin Vincent" }];
+for (let prop in products) {
+    console.log(prop);
+}
+
+console.log(products);

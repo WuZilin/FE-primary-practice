@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>下一种食物</button>
+    <p class="foodContainer"></p>
+</body>
+<script>
+    let foodList = [
+        { chocolate: '🍫' },
+        { iceCream: '🍦' },
+        { popCorn: '🍿' },
+        { cheese: '🧀' },
+        { hamburger: '🍔' },
+        { frenchFries: '🍟' },
+        { apple: '🍎' },
+        { sussi: '🍱' },
+    ];
+    let foodIterator = foodList[Symbol.iterator]();
+    document.querySelector('button').addEventListener('click', () => {
+        let food = foodIterator.next();
+        console.log(food);
+        document.querySelector('.foodContainer').innerHTML = Object.values(food.value)[0];
+    });
+</script>
+
+</html>

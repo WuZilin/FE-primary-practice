@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汇率计算器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #28725c;
+        }
+
+        #currencyConverter {
+            width: 400px;
+            height: 570px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 100px auto;
+            padding-top: 30px;
+        }
+
+        #cnp {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #enp {
+            font-size: 10px;
+            text-align: center;
+            margin-top: 10px;
+            color: #777;
+        }
+
+        #mainArea {
+            width: 85%;
+            margin: 60px auto;
+        }
+
+        label {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #inputMoney {
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            display: block;
+            padding-left: 10px;
+            margin-top: 10px;
+        }
+
+        select {
+            display: block;
+            width: 100%;
+            height: 40px;
+            margin-top: 10px;
+        }
+
+        #exchangeArea {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        #baseArea,
+        #targetArea {
+            width: 35%;
+        }
+
+        img {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            top: 40px;
+        }
+
+        #showArea {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        button {
+            width: 100%;
+            background-color: #28725c;
+            color: #fff;
+            height: 40px;
+            border-radius: 8px;
+            font-size: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="currencyConverter">
+        <p id="cnp">汇率计算器</p>
+        <p id="enp">Currency Converter</p>
+
+        <div id="mainArea">
+            <label for="inputMoney">输入金额</label>
+            <input type="number" id="inputMoney">
+
+            <div id="exchangeArea">
+                <div id="baseArea">
+                    <label for="baseCurrency">基础货币</label>
+                    <select name="baseCurrency" id="baseCurrency">
+
+                    </select>
+                </div>
+                <img src="./交换.png" alt="交换符号">
+                <div id="targetArea">
+                    <label for="targetCurrency">目标货币</label>
+                    <select name="targetCurrency" id="targetCurrency">
+
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="showArea">
+            <p id="answer"></p>
+            <button>获取汇率</button>
+        </div>
+    </div>
+</body>
+<script>
+    const defaultUrl = 'https://v6.exchangerate-api.com/v6/4612e4b0036b51d0324a2825/latest/CNY';
+    const currencyList = [];
+    async function init() {
+        const response = await fetch(defaultUrl);
+        const data = await response.json();
+        const ratesData = data.conversion_rates;
+        for (let key in ratesData) {
+            let aCurrency1 = document.createElement('option');
+            aCurrency1.value = key;
+            aCurrency1.innerText = key;
+            let aCurrency2 = document.createElement('option');
+            aCurrency2.value = key;
+            aCurrency2.innerText = key;
+            document.getElementById('baseCurrency').appendChild(aCurrency1);
+            document.getElementById('targetCurrency').appendChild(aCurrency2);
+            document.getElementById('targetCurrency').value = 'USD';
+        }
+    }
+    init();
+    let p = document.getElementById('answer');
+    document.querySelector('button').addEventListener('click', () => {
+        const num = document.getElementById('inputMoney').value;
+        if (!num) {
+            p.innerHTML = '请输入金额';
+            return;
+        }
+        const baseCurrency = document.getElementById('baseCurrency').value;
+        const targetCurrency = document.getElementById('targetCurrency').value;
+        const url = 'https://v6.exchangerate-api.com/v6/4612e4b0036b51d0324a2825/latest/' + baseCurrency;
+        p.innerHTML = '正在获取汇率...';
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                let rate = data.conversion_rates[targetCurrency];
+                let result = num * rate;
+                p.innerHTML = `${num}${baseCurrency} = ${result}${targetCurrency}`;
+            })
+            .catch(err => {
+                p.innerHTML = '获取汇率失败, 失败原因： ' + err;
+            });
+    });
+</script>
+
+</html>

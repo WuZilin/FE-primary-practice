@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    canvas {
+        border: 1px solid #000;
+    }
+</style>
+
+<body>
+    <canvas id="firstCanvas" width="300px" height="300px"></canvas>
+    <canvas id="secondCanvas" width="300px" height="300px"></canvas>
+</body>
+<script>
+    let firstCanvas = document.getElementById('firstCanvas');
+    let secondCanvas = document.getElementById('secondCanvas');
+    let ctx1 = firstCanvas.getContext('2d');  // 获取画布的上下文
+    let ctx2 = secondCanvas.getContext('2d');
+    if (firstCanvas.getContext) {
+
+        ctx1.beginPath();  // 开始画一条路径，准备画一个三角形
+        ctx1.moveTo(10, 10);  // ‘笔尖’落笔在（10px，10px）
+        ctx1.lineTo(10, 70);  // 笔开始移动
+        ctx1.lineTo(62, 40);
+        ctx1.fill();  //使用fill()时，不需要闭合路径，自动填充
+
+        ctx1.moveTo(70.5, 10.5);
+        ctx1.lineTo(70.5, 70.5);
+        ctx1.lineTo(122.5, 40.5);
+        // ctx1.lineTo(70, 10);  可以选择手动lineTo到起点
+        ctx1.closePath();  // 也可以直接使用closePath()闭合路径
+        ctx1.stroke();  // 使用stroke()画线段时，则需要闭合路径
+    }
+
+    function drawMoveDashLine() {
+        ctx1.clearRect(99, 99, 102, 102); // 画之前先清除，否则会叠加，一会儿就变成一条实线啦
+        ctx1.setLineDash([4, 2]);
+        ctx1.lineDashOffset = offset;
+        ctx1.strokeRect(100, 100, 100, 100);
+        ctx1.strokeRect(125, 125, 50, 50);
+    }
+
+    var offset = 0;
+    function march() {
+        offset++;
+        if (offset > 16) {
+            offset = 0;
+        }
+        drawMoveDashLine();  // 所以用Canvas实现动画的原理和动画片一样，把每一幅画全部画好，时间一到就把把上一幅画擦除，再换上下一幅
+        setTimeout(march, 200);
+    }
+    march();
+
+    function drawGradients() {
+        let gradient1 = ctx2.createLinearGradient(0, 0, 0, 150);
+        gradient1.addColorStop(0, 'red');
+        gradient1.addColorStop(0.5, 'yellow');
+        gradient1.addColorStop(1, 'green');
+        ctx2.fillStyle = gradient1;
+        ctx2.fillRect(0, 0, 150, 150);
+
+        let gradient2 = ctx2.createLinearGradient(150, 0, 300, 0);  // 这个主要是定义一定区域内，渐变的矢量方向
+        gradient2.addColorStop(0, 'red');
+        gradient2.addColorStop(0.5, 'yellow');
+        gradient2.addColorStop(1, 'green');
+        ctx2.fillStyle = gradient2;
+        ctx2.fillRect(150, 0, 150, 150);
+
+        let gradient3 = ctx2.createLinearGradient(0, 150, 150, 300);
+        gradient3.addColorStop(0, 'red');
+        gradient3.addColorStop(0.5, 'yellow');
+        gradient3.addColorStop(1, 'green');
+        ctx2.fillStyle = gradient3;
+        ctx2.fillRect(0, 150, 150, 150);
+
+        let gradient4 = ctx2.createRadialGradient(187.5, 187.5, 37.5, 262.5, 262.5, 37.5);
+        gradient4.addColorStop(0, 'red');
+        gradient4.addColorStop(0.5, 'yellow');
+        gradient4.addColorStop(1, 'skyblue');
+        ctx2.fillStyle = gradient4;
+        ctx2.fillRect(150, 150, 150, 150);
+
+    }
+
+    drawGradients();
+</script>
+
+</html>

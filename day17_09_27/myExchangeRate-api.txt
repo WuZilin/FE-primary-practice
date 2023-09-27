@@ -1,0 +1,3 @@
+4612e4b0036b51d0324a2825
+https://v6.exchangerate-api.com/v6/4612e4b0036b51d0324a2825/latest/USD
+https://v6.exchangerate-api.com/v6/4612e4b0036b51d0324a2825/latest/CNY
